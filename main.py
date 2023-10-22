@@ -84,7 +84,7 @@ def save_report(user, report):
 def main():
     users = get_users()
 
-    if not os.path. exists('tasks'):
+    if not os.path.exists('tasks'):
         os.mkdir('tasks')
 
     os.chdir('tasks')
