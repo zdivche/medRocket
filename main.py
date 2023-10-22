@@ -33,11 +33,12 @@ def generate_report(user):
     company = user['company']['name']
     name = f"{user['name']} <{user['email']}>"
 
-    now = datetime.now().strftime('%d.%m.%Y %H:%M:%S')
+    now = datetime.now().strftime('%d.%m.%Y %H:%M')
 
     lines = [
         f"# Отчёт для {company}.",
-        f"{name} {now} Всего задач: {len(tasks)}",
+        f"{name} {now}\n"
+        f"Всего задач: {len(tasks)}",
         "",
         "## Актуальные задачи ({}):".format(len(pending)),
     ]
